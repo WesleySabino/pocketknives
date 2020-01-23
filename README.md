@@ -2,6 +2,10 @@
 
 Th objective is to build a hub to help people in their daily necessities.
 
+## Production URL
+
+https://pocketknives.netlify.com/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
