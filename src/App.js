@@ -1,9 +1,11 @@
 import React from 'react'
+import theme from './themes/theme'
 
 function App () {
   return (
     <>
       <h1>Pocketknives</h1>
+      <h2>{theme.colors.bg.main}</h2>
       <h2>List of desirable functionalities:</h2>
       <ul>
         <li>Healthy tools</li>
