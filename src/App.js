@@ -1,11 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import theme from './themes/theme'
 
-function App () {
+
+const App = () => {
+
+  const [newWeight, setNewWeight] = useState('')
+
+  const handleChange = (e) => {
+    console.log(e.target.value)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(e.target.weight.value)
+    setNewWeight( newWeight + e.target.weight.value)
+  }
+
   return (
     <>
       <h1>Pocketknives</h1>
-      <h2>{theme.colors.bg.main}</h2>
+      <h2>Add your weight</h2>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="weightInput">weight:</label>
+        <input id="weightInput" type="text" name="weight" onChange={handleChange}/>
+        <button type="submit" >add new weight</button>
+      </form>
+      Current weight = {newWeight}
       <h2>List of desirable functionalities:</h2>
       <ul>
         <li>Healthy tools</li>
