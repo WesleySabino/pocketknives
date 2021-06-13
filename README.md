@@ -1,6 +1,6 @@
 # Pocketknives
 
-Just a playground.
+Just a playground of random utilities.
 
 ## Production URL
 
