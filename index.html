@@ -10,34 +10,65 @@
     <h1>Conversions</h1>
 
     <div class="conversion-section">
-    <p>KG / lbs</p>
+        <p>KG - Lbs</p>
         <label for="kg">Kg:</label>
-        <input id="kg" type="number" value="0"/>
+        <input id="kg" type="number"/>
         <label for="lbs">lbs:</label>
-        <input id="lbs" type="number" value="0"/>
+        <input id="lbs" type="number"/>
+    </div>
+    <div class="conversion-section">
+        <p>Km - Miles</p>
+        <label for="km">Km:</label>
+        <input id="km" type="number"/>
+        <label for="miles">lbs:</label>
+        <input id="miles" type="number"/>
     </div>
 
     <script>
-        let kg = document.querySelector('#kg')
-        let lbs = document.querySelector('#lbs')
+        const setKgToLbs = () => {
+            let kg = document.querySelector('#kg')
+            let lbs = document.querySelector('#lbs')
 
-        kg.addEventListener('change', () => {
-            console.log('changed kg')
+            kg.addEventListener('change', () => {
+                getKgToLbs()
+            })
 
-            kgToLbs()
-        })
+            lbs.addEventListener('change', () => {
+                getLbsToKg()
+            })
 
-        lbs.addEventListener('change', () => {
-            lbsToKg()
-        })
+            const getKgToLbs = () => {
+                lbs.value = kg.value * 2.2
+            }
 
-        const kgToLbs = () => {
-            lbs.value = kg.value * 2.2
+            const getLbsToKg = () => {
+                kg.value = lbs.value / 2.2
+            }
         }
 
-        const lbsToKg = () => {
-            kg.value = lbs.value / 2.2
+        const setKmToMiles = () => {
+            let km = document.querySelector('#km')
+            let miles = document.querySelector('#miles')
+
+            km.addEventListener('change', () => {
+                getKmToMiles()
+            })
+
+            miles.addEventListener('change', () => {
+                getMilesToKm()
+            })
+
+            const getKmToMiles = () => {
+                miles.value = km.value / 1.60934
+            }
+
+            const getMilesToKm = () => {
+                km.value = miles.value * 1.60934
+            }
         }
+        
+        setKgToLbs()
+        setKmToMiles()
     </script>
 </body>
 </html>
