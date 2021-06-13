@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PocketKnives</title>
+</head>
+<body>
+    <h1>Conversions</h1>
+
+    <div class="conversion-section">
+    <p>KG / lbs</p>
+        <label for="kg">Kg:</label>
+        <input id="kg" type="number" value="0"/>
+        <label for="lbs">lbs:</label>
+        <input id="lbs" type="number" value="0"/>
+    </div>
+
+    <script>
+        let kg = document.querySelector('#kg')
+        let lbs = document.querySelector('#lbs')
+
+        kg.addEventListener('change', () => {
+            console.log('changed kg')
+
+            kgToLbs()
+        })
+
+        lbs.addEventListener('change', () => {
+            lbsToKg()
+        })
+
+        const kgToLbs = () => {
+            lbs.value = kg.value * 2.2
+        }
+
+        const lbsToKg = () => {
+            kg.value = lbs.value / 2.2
+        }
+    </script>
+</body>
+</html>
