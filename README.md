@@ -4,4 +4,4 @@ Just a playground of random utilities.
 
 ## Production URL
 
-https://pocketknives.netlify.com/
+https://pocketknives.netlify.com/ (deprecated)
