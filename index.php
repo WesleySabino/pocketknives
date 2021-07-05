@@ -1,3 +1,11 @@
+<?php
+
+echo("oie");
+
+headr("HTTP/1.1 404 Not Found");
+?>
+
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,3 +80,5 @@
     </script>
 </body>
 </html>
+
+-->
